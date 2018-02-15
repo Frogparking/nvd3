@@ -281,6 +281,7 @@ nv.models.axis = function() {
 
             if (showMaxMin && (axis.orient() === 'left' || axis.orient() === 'right')) {
           //check if max and min overlap other values, if so, hide the values that overlap
+          // Forked from main repo to fix Jira issue WD-1128
           g.selectAll('g') // the g's wrapping each tick
             .each(function (d, i) {
               var is_transparent = false
